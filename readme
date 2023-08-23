@@ -31,3 +31,6 @@
 # to build for production npm run build 
 # npm run build
 # it will create a app.js file javascript file
+
+
+#  npm install typeorm reflect-metadata pg for dependency
