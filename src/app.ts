@@ -24,8 +24,13 @@ const AppDataSource = new DataSource({
     port:5432,
     username:"postgres",
     password:"germany4321#",
-    database:"postgres"
+    database:"postgres",
+    entities:["src/entities/*{.ts,.js}"],
+    synchronize:true,
+    logging:true
 });
+// loggin true to see the logs file from the typeorm
+// entities vitra jau tyaa vitra jun sukai folder .ts and .js file pauxau tyo use gara .js for the production build
 // here we are providing .then to show that what will be after initialization of db is  successfull
 AppDataSource.initialize().then(()=>{ 
     

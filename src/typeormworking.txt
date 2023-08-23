@@ -1,0 +1,22 @@
+the typeorm decorater flow 
+
+typeorm decorator in our class code(entity) => send to typeorm => sql =>database driver =>postgressql
+
+note:for more check decorator documention in typeorm 
+
+
+we only need three things at first like 
+Entity,PrimaryGeneratedColumn,Column entity to create table view PrimaryGeneratedColumn for primary key and colum for colum decorator
+
+log files 
+
+query: SELECT * FROM current_schema()
+query: SELECT version();
+query: START TRANSACTION
+query: SELECT * FROM current_schema()
+query: SELECT * FROM current_database()
+query: SELECT "table_schema", "table_name" FROM "information_schema"."tables" WHERE ("table_schema" = 'public' AND "table_name" = 'user')
+query: SELECT * FROM "information_schema"."tables" WHERE "table_schema" = 'public' AND "table_name" = 'typeorm_metadata'
+query: CREATE TABLE "user" ("id" SERIAL NOT NULL, "firstName" character varying NOT NULL, "lastName" character varying NOT NULL, "email" character varying NOT NULL, "number" character varying NOT NULL, CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY ("id"))
+query: COMMIT
+database connected successfully
