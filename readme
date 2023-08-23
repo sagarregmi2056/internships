@@ -1,0 +1,23 @@
+# npm install --save-dev  ts-node typescript nodemon @types/express
+# npm i express
+# npm install -g typescript
+# tsc --init
+#  "rootDir": "./src",   where we will placed ts file uncomment it
+# "outDir": "./dist",  
+#  "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
+#     "emitDecoratorMetadata": true,   
+# create a source folder and start writing ts file there
+# "build":"tsc -p ." the -p flag will take from source and search in the current directly
+
+# "scripts": {
+#    "start": "nodemon ./src/app.ts",
+#    "build":"tsc -p .",
+#    "start:prod":"node ./dist/app.ts"
+#   },
+
+# added dev
+# "scripts": {
+#    "start:dev": "nodemon ./src/app.ts",
+#    "build":"tsc -p .",
+#    "start:prod":"node ./dist/app.ts"
+#   },
