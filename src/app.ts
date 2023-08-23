@@ -7,12 +7,37 @@ const app = express();
 
 import {DataSource} from 'typeorm'
 
+import { User } from "./entities/User";
+
 app.use(express.json());
 const port = 3000;
 
-app.get('/',function(req,res){
+app.get('/', async function(req,res){
 
-    res.send("hello from app.ts file")
+    const userrepo = AppDataSource.getRepository(User);
+   
+//    find 
+    // const allrecord = await userrepo.find();
+    // res.json(allrecord);
+
+    // insert
+
+    let user : User = new User();
+    user.email = "sagarregmi@gmail.com";
+    user.firstName = "sagar";
+    user.lastName="regmi";
+    user.number = "98043333333";
+   const createddata= await userrepo.save(user);
+
+   res.json(createddata);
+
+
+//    delete  
+// await userrepo.delete(2);
+
+
+// update 
+// await userrepo.update(1,firstName:"saga",lastName:"reg",email:"saga@regmi22",number:"8888888899999")
 })
 
 // giving connection to the postgress database 
