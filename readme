@@ -21,3 +21,13 @@
 #    "build":"tsc -p .",
 #    "start:prod":"node ./dist/app.ts"
 #   },
+
+
+
+
+# npm run start:dev
+
+
+# to build for production npm run build 
+# npm run build
+# it will create a app.js file javascript file

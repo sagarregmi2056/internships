@@ -6,7 +6,7 @@
   "scripts": {
    "start:dev": "nodemon ./src/app.ts",
    "build":"tsc -p .",
-   "start:prod":"node ./dist/app.ts"
+   "start:prod":"node ./dist/app.js"
   },
   "keywords": [],
   "author": "",
