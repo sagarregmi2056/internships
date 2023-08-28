@@ -2,7 +2,7 @@
 import "reflect-metadata"
 
 // same like javascript es6 module 
-import express from 'express';
+import express,{Request,Response} from 'express';
 const app = express();
 
 import {DataSource} from 'typeorm'
@@ -12,7 +12,7 @@ import { User } from "./entities/User";
 app.use(express.json());
 const port = 3000;
 
-app.get('/', async function(req,res){
+app.get('/', async function(req:Request,res:Response){
 
     const userrepo = AppDataSource.getRepository(User);
    
